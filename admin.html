@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - SPBU</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <header class="navbar">
+        <span>SPBU Dashboard</span>
+    </header>
+    <main class="admin-container">
+        <h1>Admin Dashboard</h1>
+        <div class="action-buttons">
+            <button id="download-pdf">Unduh PDF</button>
+            <button id="download-excel">Unduh Excel</button>
+            <button id="logout">Logout</button>
+        </div>
+        <section class="tables-container">
+            <h2>Pertalite</h2>
+            <table id="pertalite-table">
+                <thead>
+                    <tr>
+                        <th>Hari</th>
+                        <th>Stok Awal</th>
+                        <th>DO</th>
+                        <th>Penjualan</th>
+                        <th>Stok Akhir</th>
+                        <th>Stok Real</th>
+                        <th>Losses</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <h2>Pertamax</h2>
+            <table id="pertamax-table">
+                <thead>
+                    <tr>
+                        <th>Hari</th>
+                        <th>Stok Awal</th>
+                        <th>DO</th>
+                        <th>Penjualan</th>
+                        <th>Stok Akhir</th>
+                        <th>Stok Real</th>
+                        <th>Losses</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <h2>Solar</h2>
+            <table id="solar-table">
+                <thead>
+                    <tr>
+                        <th>Hari</th>
+                        <th>Stok Awal</th>
+                        <th>DO</th>
+                        <th>Penjualan</th>
+                        <th>Stok Akhir</th>
+                        <th>Stok Real</th>
+                        <th>Losses</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <h2>Dexlite</h2>
+            <table id="dexlite-table">
+                <thead>
+                    <tr>
+                        <th>Hari</th>
+                        <th>Stok Awal</th>
+                        <th>DO</th>
+                        <th>Penjualan</th>
+                        <th>Stok Akhir</th>
+                        <th>Stok Real</th>
+                        <th>Losses</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.3/jspdf.plugin.autotable.min.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

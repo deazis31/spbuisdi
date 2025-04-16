@@ -1,0 +1,274 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Navbar (untuk index.html) */
+.navbar {
+  background-color: #0066cc;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.navbar .login-button {
+  background-color: #28a745;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.navbar .login-button:hover {
+  background-color: #218838;
+}
+
+/* Days Container (untuk index.html) */
+.days-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.day-container {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.table-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  tight: 100%;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.table-wrapper {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.table-wrapper table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-wrapper th,
+.table-wrapper td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.table-wrapper th {
+  background-color: #f2f2f2;
+}
+
+/* Garis Pemisah Shift 1 dan 2 */
+.table-wrapper tbody tr:nth-child(2) {
+  border-bottom: 2px solid #bbb;
+}
+
+td[contenteditable="true"] {
+  cursor: text;
+  background: #fff;
+}
+
+td[contenteditable="true"]:focus {
+  outline: 2px solid #0066cc;
+}
+
+.input-awal,
+.input-harga {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.input-awal label,
+.input-harga label {
+  font-weight: bold;
+}
+
+/* Warna header untuk index.html */
+.pertalite-header {
+  background-color: #28a745;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.pertamax-header {
+  background-color: #0066cc;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.solar-header {
+  background-color: #fd7e14;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.dexlite-header {
+  background-color: #ffc107;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Total Penjualan */
+.total-penjualan {
+  margin-top: 10px;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Login Container (untuk login.html) */
+.login-container {
+  max-width: 400px;
+  margin: 50px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(61, 141, 221);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.login-container button:hover {
+  background-color: rgb(0, 153  button {
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(0, 153, 77);
+}
+
+#error-message {
+  text-align: center;
+  margin-top: 10px;
+  color: #dc3545;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .navbar .login-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .days-container {
+    padding: 0 10px;
+  }
+
+  .table-container {
+    grid-template-columns: 1fr;
+  }
+
+  .table-wrapper table {
+    font-size: 0.9em;
+    min-width: 400px;
+    display: block;
+    overflow-x: auto;
+  }
+
+  .table-wrapper tbody tr:nth-child(2) {
+    border-bottom: 2px solid #bbb;
+  }
+
+  .total-penjualan {
+    padding: 6px;
+    font-size: 0.9em;
+  }
+
+  .login-container {
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  .form-group input {
+    font-size: 14px;
+  }
+
+  .login-container button {
+    padding: 8px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,208 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #343a40;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar span {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+/* Main container */
+.admin-container {
+  max-width: 1280px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+.admin-container h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 24px;
+  color: #212529;
+}
+
+/* Action buttons */
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.action-buttons button {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  min-width: 100px;
+}
+
+.action-buttons button:hover {
+  transform: translateY(-1px);
+}
+
+.action-buttons button:active {
+  transform: translateY(0);
+}
+
+#download-pdf {
+  background-color: #007bff;
+}
+
+#download-pdf:hover {
+  background-color: #0056b3;
+}
+
+#download-excel {
+  background-color: #28a745;
+}
+
+#download-excel:hover {
+  background-color: #218838;
+}
+
+#logout {
+  background-color: #dc3545;
+}
+
+#logout:hover {
+  background-color: #c82333;
+}
+
+/* Tables container */
+.tables-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.tables-container h2 {
+  font-size: 1.4rem;
+  color: #212529;
+  margin-bottom: 12px;
+  border-left: 4px solid #007bff;
+  padding-left: 8px;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: right;
+  border-bottom: 1px solid #dee2e6;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+  font-weight: 600;
+}
+
+td input {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  text-align: right;
+  background-color: #fff;
+}
+
+td input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+tr:hover {
+  background-color: #e9ecef;
+}
+
+/* Total row */
+.total-row {
+  font-weight: 600;
+  background-color: #f1f3f5;
+}
+
+.total-row .total-cell {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-container {
+    padding: 0 12px;
+  }
+
+  .action-buttons {
+    gap: 8px;
+  }
+
+  .action-buttons button {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    min-width: 80px;
+  }
+
+  table {
+    min-width: 600px;
+    display: block;
+    overflow-x: auto;
+  }
+
+  th,
+  td {
+    padding: 8px;
+  }
+
+  td input {
+    padding: 4px;
+    font-size: 0.85rem;
+  }
+
+  .tables-container h2 {
+    font-size: 1.2rem;
+  }
+}
